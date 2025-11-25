@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .rel{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+            
+        }
+        .pr{
+            width: 200px;
+            height: 300px;
+            background-color: rgba(102, 51, 153, 0.495);
+            position: absolute;
+            z-index: 10;
+        }
+        .dr{
+            width: 200px;
+            height: 300px;
+            background-color: crimson;
+            box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.395);
+            position: absolute;
+            left: 150px;
+        }
+        .a{
+            background-color: red;
+            height: 400px;
+            width: 500px;
+        }
+        .b{
+            height: 150px;
+            width: 500px;
+            background-color: blue;
+            bottom: 100px;
+        }
+        .c{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS positioning</h1>
+    <div class="rel">
+        <div class="pr"></div>
+        <div class="dr"></div>
+    </div>
+    <h1>zastava laos-a</h1>
+    <div class="a">
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+</body>
+</html>
