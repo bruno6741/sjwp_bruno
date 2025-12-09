@@ -1,0 +1,113 @@
+.Zvijezda{
+    width: 200px;
+    height: 200px;
+    background: gold;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+        
+    );
+}
+.r{
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+.j{
+    position: absolute;
+    background: #cf1126;
+    width: 100px;
+    height: 200px;
+    left: 100px;
+}
+.d{
+    position: absolute;
+    background: #007a5e;
+    width: 100px;
+    height: 200px;
+}
+.t{
+    position: absolute;
+    background: #fcd116;
+    width: 100px;
+    height: 200px;
+    left: 200px;
+}
+.zv{
+    top:  410px;
+    left: 128px;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background: #fcd116;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+        
+    );
+}
+.re{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background-color: red;
+}
+.je{
+    
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    width: 200px;
+    height: 200px;
+    bottom: 100px;
+    left: 50px;
+}
+.dv{
+    position: absolute;
+    border-radius: 50%;
+    background: red;
+    width: 150px;
+    height: 150px;
+    bottom: 125px;
+    left: 105px;
+}
+.zvj{
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    background: white;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+        
+    );  
+    left: 240px;
+    bottom: 160px; 
+    transform: rotatez(50deg);
+}
