@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaci</title>
+    <style>
+        .b{
+            width: 50px;
+            height: 50px;
+            border: 5px solid #fcd779;
+            border-radius: 50%;
+            border-top: 5px solid transparent;
+            animation: 3s load ease 0s infinite running;
+        }
+        @keyframes load {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .a{
+            width: 50px;
+            height: 50px;
+            border: 5px solid cyan;
+
+            animation: 3s zib ease 0s infinite running;
+            
+        }
+        @keyframes zib {
+            0%{
+
+                transform: rotatez(180deg);
+            }
+            50%{
+                transform: rotatez(180deg);
+            }
+            100%{
+                transform: rotateX(180deg);                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="b">a</div>
+    <div class="a"></div>
+</body>
+</html>
