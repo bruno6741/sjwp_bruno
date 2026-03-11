@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak</title>
+    <style>
+        *{
+            padding: 40px;
+        }
+        .box{
+            background-color: grey;
+            border-radius: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 30px;
+            margin: 10px;
+            color: white;
+        }
+        .container{
+            width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .a{
+            grid-column: span 2;
+        }
+        .b{
+            grid-row: span 2;
+        }
+        .container1{
+            width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);           
+        }
+        .a1{
+            grid-column: span 2;
+        }
+        .b1{
+            grid-column: span 2;
+        }
+        .d1{
+            grid-column: span 3;
+        }
+        .e1{
+            grid-column: span 4;
+        }
+        .a2{
+            grid-column: span 2;
+        }
+        .b2{
+            grid-row: span 2;
+        }
+        .e2{
+            grid-row: span 2;
+        }
+        .container2{
+            width: 750px;
+            height: 600px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);              
+        }
+        .box1{
+            background-color: grey;
+            border-radius: 10px;
+            display: flex;
+            justify-content: left;
+            font-size: 30px;
+            margin: 10px;
+            color: white;
+           
+        }
+        .hdr{
+            grid-column: span 4;
+        }
+        .sb1{
+            background-color: rgb(54, 54, 54);
+            grid-row: span 2;
+        }
+        .ct{
+            background-color: rgb(54, 54, 54);
+            grid-column: span 3;
+            grid-row: span 2;
+
+        }
+        .sb2{
+            background-color: rgb(206, 206, 206);
+            color: rgb(50, 50, 50);
+            grid-column: span 4;
+        }
+        .ftr{
+            grid-column: span 4;
+        }
+        .container3{
+            width: 1050px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 1fr);            
+        }
+        .box2{
+            background-color: rgb(42, 42, 42);
+            border-radius: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 30px;
+            margin: 10px;
+            color: white;            
+        }
+        .bx1{
+            color: rgb(42, 42, 42);
+            background-color: rgb(186, 186, 186);
+        }
+        .con2{
+            width: 1050px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);    
+        }
+        .a4{
+            background-color: rgb(42, 42, 42);
+            grid-column: span 2;
+        }
+        .b4{
+            background-color: rgb(42, 42, 42);
+            grid-column: span 3;
+        }
+        .d4{
+            background-color: rgb(42, 42, 42);
+            grid-column: span 2;
+        }
+        .c4{
+            background-color: rgb(42, 42, 42);
+        }
+        .dd4{
+            background-color: lightskyblue;
+            grid-column: span 2;
+        }
+        .e4{
+            background-color: rgb(42, 42, 42);
+            grid-column: span 5;
+        }
+        .f4{
+            background-color: mediumblue;
+            grid-area: 10;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prvi</h1>
+    <div class="container con1">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+    </div>
+    <br>
+    <h1>Drugi</h1>
+    <div class="container">
+        <div class="box">D</div>
+        <div class="box">A</div>
+        <div class="box">F</div>
+        <div class="box">E</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+    <br>
+    <h1>treci/cetvrti</h1>
+    <div class="container">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </div>
+    <br>
+    <h1>Peti</h1>
+    <div class="container1">
+        <div class="box a1">A</div>
+        <div class="box b1">B</div>
+        <div class="box c1">C</div>
+        <div class="box d1">D</div>
+        <div class="box e1">E</div>
+    </div>
+    <br>
+    <h1>Šesti</h1>
+    <div class="container1">
+        <div class="box a2">A</div>
+        <div class="box b2">B</div>
+        <div class="box e2">E</div>
+        <div class="box c2">C</div>
+        <div class="box d2">D</div>
+    </div>
+    <br>
+    <h1>Sedmi</h1>
+    <div class="container2">
+        <div class="box1 hdr">Header</div>
+        <div class="box1 sb1">Sidebar</div>
+        <div class="box1 ct">Content <br>More content than we had before so this column is now quite tall.</div>
+        <div class="box1 sb2">Sidebar 2</div>
+        <div class="box1 ftr">Footer</div>
+    </div>
+    <br>
+    <h1>Osmi</h1>
+    <div class="container3">
+        <div class="box2">1</div>
+        <div class="box bx1">2</div>
+        <div class="box2">3</div>
+        <div class="box bx1">4</div>
+        <div class="box2">5</div>
+        <div class="box bx1">6</div>
+        <div class="box2">7</div>
+        <div class="box bx1">8</div>
+        <div class="box2">9</div>
+        <div class="box bx1">10</div>
+        <div class="box2">11</div>
+        <div class="box bx1">12</div>
+    </div>   
+    <br>
+    <h1>Deveti</h1>
+    <div class="container1 con2">
+        <div class="box a4">A</div>
+        <div class="box b4">B</div>
+        <div class="box c4">C</div>
+        <div class="box d4">D</div>
+        <div class="box dd4"></div>
+        <div class="box e4">E</div>
+        <div class="box f4">F</div>        
+    </div>     
+</body>
+</html>
