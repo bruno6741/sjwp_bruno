@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja galerija</title>
+</head>
+<style>
+  *{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+    background-color: rgb(98, 98, 167);
+  }
+  a:link{
+    color: blue;
+  }
+  a:visited{
+    color: blue;
+  }
+  .btn{
+    color: white;
+    background-color: rgb(209, 209, 255);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 17px;
+  }
+  .btn:hover{
+    transform: scale(1.1);
+  }
+  .navbar{
+    background-color: darkblue;
+    display: flex;
+    justify-content: right;
+    border-radius: 10px;
+  }
+  .dokumentarci{
+    width: 120px;
+  }
+  .title{
+    color: white;
+    margin-right: 1400px;
+    border: 0px;
+    background-color: transparent;
+    font-size: 19px;
+    
+  }
+  .titl:link{
+    color: white;
+  }
+  .titl:visited{
+    color: white;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    margin: 20px;
+  }
+  .film{
+    width: 300px;
+    height: 400px;
+    border: 5px dotted black;
+  }
+</style>
+<body>
+<nav class="navbar">
+  <form class="form-inline">
+    <button class="title"><a href="./zadaca3.html" class="titl">MovieGallery</a></button>    
+    <button class="btn filmovi" type="button"><a href="./zadaca3_1.html">Filmovi</a></button>
+    <button class="btn serije" type="button"><a href="./zadaca3.html">Serije</a></button>
+    <button class="btn dokumentarci" type="button"><a href="./zadaca3_2.html">Dokumentarci</a></button>
+  </form>
+</nav>
+<div class="container">
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+  <div class="film"></div>
+</div>
+</body>
+</html>
