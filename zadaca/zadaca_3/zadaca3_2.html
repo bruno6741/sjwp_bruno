@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja galerija</title>
+    <title>Movie Central</title>
 </head>
 <style>
   *{
@@ -11,48 +11,52 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   body{
-    background-color: rgb(98, 98, 167);
+    background-color: #cdd1c4;
   }
-  a:link{
-    color: blue;
-  }
-  a:visited{
-    color: blue;
-  }
-  .btn{
-    color: white;
-    background-color: rgb(209, 209, 255);
-    width: 80px;
-    height: 30px;
-    border-radius: 10px;
-    margin: 10px;
-    font-size: 17px;
-  }
+
+.navbar {
+  background-color: #4d5061;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 27px 1px rgba(0,0,0,0.64);
+}
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn{
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+  background-color: #e8c547;
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.6), 
+    inset 0 -2px 4px rgba(0,0,0,0.4),      
+    0 4px 8px rgba(0,0,0,0.5); 
+  transition: 0.1s transform;
+}
   .btn:hover{
     transform: scale(1.1);
   }
-  .navbar{
-    background-color: darkblue;
-    display: flex;
-    justify-content: right;
-    border-radius: 10px;
+  .btn:active{
+    transform: scale(1);
   }
   .dokumentarci{
     width: 120px;
   }
   .title{
-    color: white;
-    margin-right: 1400px;
-    border: 0px;
+    padding-top: 0px;
     background-color: transparent;
-    font-size: 19px;
-    
-  }
-  .titl:link{
-    color: white;
-  }
-  .titl:visited{
-    color: white;
+    display: block;
   }
   .container{
     display: grid;
@@ -62,41 +66,209 @@
     margin: 20px;
   }
   .dokumentarac{
+    position: relative;
     width: 300px;
     height: 400px;
-    border: 5px dotted black;
+    border: 2px dashed #30323d;
+    border-radius: 10px;
+    box-shadow:
+      inset 0 2px 3px rgba(255,255,255,0.6), 
+      inset 0 -2px 4px rgba(0,0,0,0.4),      
+      0 4px 8px rgba(0,0,0,0.5); 
+    transition: 0.1s transform;
   }
+  .dokumentarac::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    z-index: 1;
+  }
+  .dokumentarac:hover{
+    transform: scale(1.05);
+  }
+  .dokumentarac:hover::after{
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .tekst{
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+  }
+  .dokumentarac:hover .tekst{
+    opacity: 1;
+  }
+  .dokumentarci{
+    box-shadow:
+      inset 0 2px 3px rgba(255,255,255,0.6), 
+      inset 0 -2px 4px rgba(0,0,0,0.4),      
+      0 4px 8px rgba(0,0,0,0.5); 
+    background-color: #5c80bc;
+    transform: scale(1.2);
+  }
+
+  
 </style>
 <body>
 <nav class="navbar">
-  <form class="form-inline">
-    <button class="title"><a href="./zadaca3.html" class="titl">MovieGallery</a></button>    
-    <button class="btn filmovi" type="button"><a href="./zadaca3_1.html">Filmovi</a></button>
-    <button class="btn serije" type="button"><a href="./zadaca3.html">Serije</a></button>
-    <button class="btn dokumentarci" type="button"><a href="./zadaca3_2.html">Dokumentarci</a></button>
-  </form>
+  <a href="./zadaca3.html" class="title">  <img src="./8c1de9398504737028073b768a44f606.png" alt="logo" height="50px"></a>
+  <div class="nav-buttons">
+    <a href="./zadaca3_1.html" class="btn filmovi">Filmovi</a>
+    <a href="./zadaca3.html" class="btn serije">Serije</a>
+    <a href="./zadaca3_2.html" class="btn dokumentarci">Dokumentarci</a>
+  </div>
 </nav>
 <div class="container">
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
-<div class="dokumentarac"></div>
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt0795176/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/I/51zMlR97GoL._AC_UF894,1000_QL80_.jpg" width="300px" height="400px" alt="Planet Earth">
+    <div class="tekst">Planet Earth IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt9253866/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BZDE1NzlkNWMtNzFiMC00ZTgxLTgyMmItOTU5OGI2NWQ4MDMxXkEyXkFqcGc@._V1_.jpg" width="300px" height="400px" alt="Our Planet">
+    <div class="tekst">Our Planet IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt0280257/" target="_blank" class="slika">
+    <img src="https://resizing.flixster.com/NpoTCol8opRmnlsWCDAxYuBg0oQ=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p189459_b_v9_bu.jpg" width="300px" height="400px" alt="The Blue Planet">
+    <div class="tekst">The Blue Planet IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt12888462/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/I/71uYSPEfnrL.jpg" width="300px" height="400px" alt="My Octopus Teacher">
+    <div class="tekst">My Octopus Teacher IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt1579361/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTM1NDc0MzAxNF5BMl5BanBnXkFtZTcwMjY1NzE3OA@@._V1_FMjpg_UX1000_.jpg" width="300px" height="400px" alt="Chasing Ice">
+    <div class="tekst">Chasing Ice IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt5189670/" target="_blank" class="slika">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSElFQUqm0q014GS2VAhaaFpiLuObIVkdYDow&s" width="300px" height="400px" alt="Making a Murderer">
+    <div class="tekst">Making a Murderer IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt4299972/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjI0OTc3MzY5Ml5BMl5BanBnXkFtZTgwNjk3MDUyNDE@._V1_.jpg" width="300px" height="400px" alt="The Jinx">
+    <div class="tekst">The Jinx IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt11318602/" target="_blank" class="slika">
+    <img src="https://territorystudio.com/wp-content/uploads/2020/02/Film_DFWC_P_002.jpg" width="300px" height="400px" alt="Don't F**k with Cats">
+    <div class="tekst">Don't F**k with Cats IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt12987894/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BZWI4YTU2N2UtYjFkYS00ZGNlLWExZTMtZmUzMDEwNzc2YjY5XkEyXkFqcGc@._V1_.jpg" width="300px" height="400px" alt="American Murder">
+    <div class="tekst">American Murder IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt0388644/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMDA5MjYzNmQtMzYwMS00YTk0LTk1ZWItMDRjZjJlZDZjYWJmXkEyXkFqcGc@._V1_.jpg" width="300px" height="400px" alt="The Staircase">
+    <div class="tekst">The Staircase IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt11464826/" target="_blank" class="slika">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScoP-_cQUJ5IObCExIM2_jrq06tWHIbHsS3Q&s" width="300px" height="400px" alt="The Social Dilemma">
+    <div class="tekst">The Social Dilemma IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt1645089/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTQ3MjkyODA2Nl5BMl5BanBnXkFtZTcwNzQxMTU4Mw@@._V1_.jpg" width="300px" height="400px" alt="Inside Job">
+    <div class="tekst">Inside Job IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt5895028/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjAwMjU5NTAzOF5BMl5BanBnXkFtZTgwMjQwODQxMDI@._V1_.jpg" width="300px" height="400px" alt="13th">
+    <div class="tekst">13th IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt7775622/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/I/71jKZtjsgOL._AC_UF894,1000_QL80_.jpg" width="300px" height="400px" alt="Free Solo">
+    <div class="tekst">Free Solo IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt7681902/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTk2YzRmYjUtNmQ1NC00NGU4LTgxOTgtMDY3NDI5NTBjYjRmXkEyXkFqcGc@._V1_.jpg" width="300px" height="400px" alt="Won't You Be My Neighbor">
+    <div class="tekst">Won't You Be My Neighbor IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt2870648/" target="_blank" class="slika">
+    <img src="https://filmartgallery.com/cdn/shop/files/Amy-Vintage-Movie-Poster-Original_600x.jpg?v=1771973441" width="300px" height="400px" alt="Amy">
+    <div class="tekst">Amy IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt1424432/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/I/51Yt-iZcmaL._AC_UF894,1000_QL80_.jpg" width="300px" height="400px" alt="Senna">
+    <div class="tekst">Senna IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt8420184/" target="_blank" class="slika">
+    <img src="https://m.media-amazon.com/images/M/MV5BOTQyYmQ1N2UtYjFkNS00NzgyLTk5YTUtYjExMDdjOTA3MGU2XkEyXkFqcGc@._V1_.jpg" width="300px" height="400px" alt="The Last Dance">
+    <div class="tekst">The Last Dance IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt6333060/" target="_blank" class="slika">
+    <img src="data:image/jpeg;base64,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" width="300px" height="400px" alt="Icarus">
+    <div class="tekst">Icarus IMDB</div>
+  </a>
+</div>
+
+<div class="dokumentarac">
+  <a href="https://www.imdb.com/title/tt2125608/" target="_blank" class="slika">
+    <img src="https://i.ebayimg.com/00/s/MTYwMFgxMDg2/z/3JMAAOSwZ2ZeXuFj/$_57.JPG?set_id=8800005007" width="300px" height="400px" alt="Searching for Sugar Man">
+    <div class="tekst">Searching for Sugar Man IMDB</div>
+  </a>
 </div>
 </body>
 </html>
