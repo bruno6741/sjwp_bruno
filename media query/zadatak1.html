@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 1</title>
+    <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 20px auto;
+  background: white;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.logo, .nav {
+  height: 40px;
+  background: orange;
+}
+
+.main {
+  height: 150px;
+  background: #d4f000;
+  margin: 10px 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  height: 80px;
+  background: steelblue;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.foot {
+  height: 40px;
+  background: #ccc;
+}
+
+@media (min-width: 768px) {
+
+  .header {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    height: 60px;
+  }
+
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .foot {
+    flex: 1 1 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header {
+    flex-direction: row;
+  }
+
+  .logo, .nav {
+    flex: 1;
+  }
+
+  .main {
+    height: 200px;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1;
+    height: 100px;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+
+  .foot {
+    flex: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header class="header">
+    <div class="logo"></div>
+    <div class="nav"></div>
+  </header>
+
+  <main class="main"></main>
+
+  <section class="cards">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="foot"></div>
+    <div class="foot"></div>
+    <div class="foot"></div>
+    <div class="foot"></div>
+  </footer>
+
+</div>
+
+</body>
+</html>

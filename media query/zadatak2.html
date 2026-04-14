@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ddd;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .box {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: black;
+        }
+
+        .box1 { background: #ef6b6b; }
+        .box2 { background: #f29a4a; }
+        .box3 { background: #e6c85c; }
+        .box4 { background: #b6d96c; }
+
+
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }     
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+</div>
+
+</body>
+</html>
