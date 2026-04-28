@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 5px;
+        }
+        .proizvod{
+            width: 100;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        @media(min-width: 1024px){
+            .j{
+                grid-column: span 2;
+            }
+            .s{
+                grid-column: span 2;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .container{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+            .j{
+                grid-column: span 2;
+            }
+            .t{
+                grid-column: span 2;
+            }
+            .p{
+                grid-column: span 2;
+            }
+        }
+        @media (max-width: 767px){
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="proizvod j">Kartica 1</div>
+        <div class="proizvod d">Kartica 2</div>
+        <div class="proizvod t">Kartica 3</div>
+        <div class="proizvod c">Kartica 4</div>
+        <div class="proizvod p">Kartica 5</div>
+        <div class="proizvod s">Kartica 6</div>
+    </div>
+</body>
+</html>

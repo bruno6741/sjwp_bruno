@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+        }
+        .proizvod{
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media(min-width: 768px){
+        .j{
+            grid-column: span 3;
+            grid-row: 1;
+            width: 100%;
+        }
+        .d{
+            grid-column: 1;
+            grid-row: span 2;
+            width: 100%;
+            height: 100%;
+        }
+        .t{
+            grid-column: span 2;
+            grid-row: span 2;
+            width: 100%;
+            height: 100%;
+        }
+        .c{
+            grid-column: span 3;
+            grid-row: 4;
+            width: 100%;
+        }
+    }
+        @media(max-width: 767px){
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+            }
+            .j{
+                width: 100vw;
+            }
+            .d{
+                width: 100vw;
+            }
+            .t{
+                width: 100vw;
+            }
+            .c{
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="proizvod j">header</div>
+        <div class="proizvod d">sidebar</div>
+        <div class="proizvod t">main</div>
+        <div class="proizvod c">footer</div>
+    </div>
+</body>
+</html>

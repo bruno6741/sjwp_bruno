@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+        .proizvod{
+            width: 100;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        @media (min-width: 768px) and (max-width: 1023px){
+            .container{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+        }
+        @media (max-width: 767px){
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="proizvod">Korisnici</div>
+        <div class="proizvod">Prodaja</div>
+        <div class="proizvod">Poruke</div>
+        <div class="proizvod">Statistika</div>
+        <div class="proizvod">Zadaci</div>
+        <div class="proizvod">Postavke</div>
+    </div>
+</body>
+</html>
