@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero sekcija */
+
+.hero-section {
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 60px 20px;
+}
+
+.hero-section img {
+    object-fit: cover;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+/* Kartice */
+
+.card {
+    transition: 0.3s;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Naslovi */
+
+h2 {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+}

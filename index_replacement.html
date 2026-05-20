@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Osobna Web Stranica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./indexstyle.css">
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Index</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Početna</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#omeni">O meni</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#hobiji">Hobiji</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#zadace">Zadaće</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./kontak.html">Kontakt</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero -->
+
+<div class="px-4 py-5 my-5 text-center hero-section">
+
+    <img class="d-block mx-auto mb-4 rounded-circle shadow"
+        src="data:image/png;base64,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"
+        alt="Profilna slika"
+        width="120"
+        height="120">
+
+    <h1 class="display-4 fw-bold text-body-emphasis">
+        Moja osobna web stranica
+    </h1>
+
+    <div class="col-lg-7 mx-auto">
+
+        <p class="lead mb-4">
+            Dobrodošli na moju osobnu web stranicu izrađenu pomoću HTML-a, CSS-a i Bootstrapa.
+            Ovdje možete saznati više o meni, mojim hobijima, interesima i školskim zadaćama.
+        </p>
+
+        <a href="#omeni" class="btn btn-primary btn-lg px-4">
+            Saznaj više
+        </a>
+
+    </div>
+
+</div>
+
+<!-- O meni -->
+
+<!-- O meni / Features -->
+
+<div class="container px-4 py-5" id="featured-3">
+
+    <h2 class="pb-2 border-bottom">O meni</h2>
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+        <!-- Kartica 1 -->
+
+        <div class="feature col">
+
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center 
+            text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded">
+
+                👨‍💻
+
+            </div>
+
+            <h3 class="fs-2 text-body-emphasis">Tko sam ja</h3>
+
+            <p>
+                Moje ime je Bruno i imam 17 godina. Pohađam Tehničku školu i zanimaju me
+                web tehnologije, programiranje i dizajn web stranica.
+            </p>
+
+        </div>
+
+        <!-- Kartica 2 -->
+
+        <div class="feature col">
+
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center 
+            text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded">
+
+                ⚽
+
+            </div>
+
+            <h3 class="fs-2 text-body-emphasis">Hobiji</h3>
+
+            <p>
+                U slobodno vrijeme bavim se sportom, a također volim igrati igrice
+                i gledati filmove i serije. Sport mi pomaže održavati kondiciju
+                i dobro se osjećati.
+            </p>
+
+        </div>
+
+        <!-- Kartica 3 -->
+
+        <div class="feature col">
+
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center 
+            text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded">
+
+                🎬
+
+            </div>
+
+            <h3 class="fs-2 text-body-emphasis">Interesi i ciljevi</h3>
+
+            <p>
+                Od serija volim akcijske i kriminalističke serije poput Prison Breaka.
+                Cilj mi je naučiti što više o web developmentu i jednog dana izrađivati
+                moderne i profesionalne web stranice.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Hobiji i vještine -->
+
+<section class="bg-light py-5" id="hobiji">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">Moji Hobiji i Vještine</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+
+                    <div class="card-body text-center">
+                        <h3>Sport</h3>
+                        <p>
+                            
+                            Sport mi pomaže održavati kondiciju.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+
+                    <div class="card-body text-center">
+                        <h3>Programiranje</h3>
+                        <p>
+                            Učim HTML, CSS, Bootstrap i JavaScript.
+                            Zanima me frontend development i dizajn web stranica.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+
+                    <div class="card-body text-center">
+                        <h3>Igrice i Filmovi</h3>
+                        <p>
+                            Volim igrati igrice.
+                            Također uživam gledati akcijske filmove i serije.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Zadaće -->
+
+<section class="container py-5" id="zadace">
+
+    <h2 class="text-center mb-5">Moje Zadaće</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 text-center">
+
+                <div class="card-body">
+                    <h4>Zadaća 1</h4>
+                    <p>Prva HTML zadaća.</p>
+
+                    <a href="./zadaca/Zadaca1.html" class="btn btn-primary">
+                        Otvori
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 text-center">
+
+                <div class="card-body">
+                    <h4>Zadaća 2</h4>
+                    <p>Druga Zadaća</p>
+
+                    <a href="./zadaca/zadaca2.html" class="btn btn-primary">
+                        Otvori
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 text-center">
+
+                <div class="card-body">
+                    <h4>Zadaća 3</h4>
+                    <p>Treća Zadaća</p>
+
+                    <a href="./zadaca/zadaca_3/zadaca3.html" class="btn btn-primary">
+                        Otvori
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 text-center">
+
+                <div class="card-body">
+                    <h4>Kontakt Forma</h4>
+                    <p></p>
+
+                    <a href="./kontak.html" class="btn btn-primary">
+                        Otvori
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-dark text-light text-center py-4">
+
+    <div class="container">
+
+        <p class="mb-1">
+            © 2026 Moja Osobna Web Stranica
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
